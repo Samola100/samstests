@@ -1,0 +1,91 @@
+# Rough London
+
+get_started = ('1')
+carry_on_death = ('2')
+save_mp_death = ('3')
+estate_death = ('4')
+park_death = ('5')
+beg_death = ('6')
+run_past_death = ('7')
+downstairs_death = ('8')
+cab_death = ('9')
+main_road_death = ('10')
+sit_death = ('11')
+upstairs_death = ('12')
+
+tube_or_bus = ('13')
+tube_story = ('14')
+bus_story = ('15')
+stand_or_sit = ('16')
+stand_story = ('17')
+upstairs_or_downstairs = ('18')
+downstairs_story = ('19')
+walk_or_cab = ('20')
+walk_story = ('21')
+park_or_main_road_or_alley = ('22')
+alley_story = ('23')
+join_riot_or_not = ('24')
+join_riot_story = ('25')
+save_mp_or_not = ('26')
+let_mp_die_story = ('27')
+estate_park_or_westfield = ('28')
+westfield_story = ('29')
+fight_beg_or_run_past = ('30')
+fight_bouncer_story = ('31')
+
+you_are_in = ('32')
+
+print(f'{get_started}')
+input(f'{tube_or_bus}: ')
+if input == ('tube'):
+    print(f'{tube_story}')
+    input(f'{stand_or_sit}: ')
+    if input == ('stand'):
+        print(f'{stand_story}')
+        input(f'{join_riot_or_not}: ')
+    else:
+        print(f'{sit_death}')
+        if input == ('join'):
+            print(f'{join_riot_story}')
+            input(f'{save_mp_or_not}: ')
+        else:
+            print(f'{carry_on_death}')
+            if input == ('not'):
+                print(f'{let_mp_die_story}')
+                input(f'{estate_park_or_westfield}: ')
+            else:
+                print(f'{save_mp_death}')
+                if input == ('westfield'):
+                    print(f'{westfield_story}')
+                    input(f'{fight_beg_or_run_past}: ')
+                elif input == ('estate'):
+                    print(f'{estate_death}')
+                else:
+                    print(f'{park_death}')
+                    if input == ('fight'):
+                        print(f'{you_are_in}')
+
+else:
+    print(f'{bus_story}')
+    input(f'{upstairs_or_downstairs}: ')
+    if input == ('downstairs'):
+        print(f'{downstairs_story}')
+        input(f'{walk_or_cab}: ')
+    else:
+        print(f'{upstairs_death}')
+        if input == ('walk'):
+            print(f'{walk_story}')
+            input(f'{park_or_main_road_or_alley}: ')
+        else:
+            print(f'{cab_death}')
+            if input == ('alley'):
+                print(f'{alley_story}: ')
+                input(f'{fight_beg_or_run_past}')
+            elif input == ('park'):
+                print(f'{park_death}')
+            else:
+                print(f'{main_road_death}')
+                if input == ('fight'):
+                    print(f'{you_are_in}')
+
+
